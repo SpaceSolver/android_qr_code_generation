@@ -7,6 +7,7 @@
       * https://qiita.com/hoshiume11/items/0f496fe80df84875c132
    * サイトには`build.gradle`で`compile`指定しているが、`implementation`にする
       * (最近のAndrdoid versionでそうなったのかしら？)
+      * サイトのまんまのversion指定になってるが、もっと新しいのあるかもしれない
    * API自体は`BarcodeEncoder#encodeBitmap`を使うだけ。
 
 # アプリの説明
