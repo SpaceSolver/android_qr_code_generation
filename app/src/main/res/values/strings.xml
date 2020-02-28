@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">generate_qr_code</string>
+    <string name="button_text_generate">generate</string>
+    <string name="button_text_reset">reset</string>
+    <string name="button_text_text">test</string>
+    <string name="default_text_code">https://www.solver.co.jp/</string>
+</resources>
