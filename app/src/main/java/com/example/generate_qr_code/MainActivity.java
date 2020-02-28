@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
+
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +29,13 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.CodeImageView);
     }
 
-    public void onGenerateButtonClicked(View view) {
+    public void onGenerateButtonClicked(View view) throws WriterException {
+        BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+        String data = codeText.getText().toString();
+        int h = imageView.getHeight();
+        int w = imageView.getWidth();
+        Bitmap bitmap = barcodeEncoder.encodeBitmap(data, BarcodeFormat.QR_CODE, w, h);
+        imageView.setImageBitmap(bitmap);
     }
 
     public void onResetButtonClicked(View view) {
